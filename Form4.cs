@@ -17,7 +17,7 @@ namespace Topic3
             InitializeComponent();
         }
 
-        int addCount = 0, subCount = 0, mulCount = 0, divCount = 0;
+        Boolean addCount = false, subCount = false, mulCount = false, divCount = false;
         private void button1_Click(object sender, EventArgs e)
         {
             if (textBox1.Text == "" || textBox2.Text == "")
@@ -38,11 +38,10 @@ namespace Topic3
             }
             if (addition.Checked == true)
             {
-                addCount = addCount + 1;
-                if (addCount < 2)
+                if (addCount == false)
                 {
                     total = num1 + num2;
-                    subCount = 0; mulCount = 0; divCount = 0;
+                    subCount = false; mulCount = false; divCount = false; addCount = true;
                 }
                 else
                 {
@@ -51,11 +50,10 @@ namespace Topic3
             }
             else if (subtraction.Checked == true)
             {
-                subCount++;
-                if (subCount < 2)
+                if (subCount == false)
                 {
                     total = num1 - num2;
-                    addCount = 0; mulCount = 0; divCount = 0;
+                    addCount = false; mulCount = false; divCount = false; subCount = true;
                 }
                 else
                 {
@@ -64,11 +62,10 @@ namespace Topic3
             }
             else if (multiplication.Checked == true)
             {
-                mulCount++;
-                if (mulCount < 2)
+                if (mulCount == false)
                 {
                     total = num1 * num2;
-                    addCount = 0; subCount = 0; divCount = 0;
+                    addCount = false; subCount = false; divCount = false; mulCount = true;
                 }
                 else
                 {
@@ -77,11 +74,10 @@ namespace Topic3
             }
             else if (division.Checked == true)
             {
-                divCount++;
-                if (divCount < 2)
+                if (divCount == false)
                 {
                     total = num1 / num2;
-                    addCount = 0; subCount = 0; mulCount = 0;
+                    addCount = false; subCount = false; mulCount = false; divCount = true;
                 }
                 else
                 {
